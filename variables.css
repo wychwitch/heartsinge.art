@@ -1,0 +1,12 @@
+:root{
+    --main-color: hsl(344, 48%, 78%);
+    --second-color: hsl(282, 12%, 57%);
+    --third-color: hsl(193, 38%, 66%);
+    --fourth-color: hsl(142, 8%, 39%);
+
+    --link-color: hsl(154, 41%, 76%);
+    --bg-one: hsl(50, 21%, 88%);
+    --bg-two: hsl(60, 20%, 95%);
+
+    --img-block: 20rem;
+}
