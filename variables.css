@@ -1,12 +1,15 @@
 :root{
-    --main-color: hsl(344, 48%, 78%);
-    --second-color: hsl(282, 12%, 57%);
-    --third-color: hsl(193, 38%, 66%);
-    --fourth-color: hsl(142, 8%, 39%);
+    --main-color: #F8ECDE;
+    --accent-1: #828E8C;
+    --accent-2: hsl(104, 14%, 79%);
+    --accent-3: #E8866C;
+    --bg-color: #494546;
 
-    --link-color: hsl(154, 41%, 76%);
-    --bg-one: hsl(50, 21%, 88%);
-    --bg-two: hsl(60, 20%, 95%);
+    --font-color-light: #F8ECDE;
+    --font-color-dark: #494546;
 
-    --img-block: 15rem;
+    --modal-bg-transparent: hsl(104, 14%, 79%, 0);
+    --modal-bg-color: hsl(104, 14%, 79%, 0.5);
+
+    --img-block: 7rem;
 }

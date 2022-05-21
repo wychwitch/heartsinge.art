@@ -14,6 +14,8 @@ const display = function (pic) {
   modalImg.src = imgSrc;
 
   imgModal.classList.remove("hidden");
+  imgModal.classList.add("opacity-grow");
+  modalImg.classList.add("img-grow");
 
   imgModal.addEventListener("click", closeImage);
 };

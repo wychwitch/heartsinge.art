@@ -1,11 +1,33 @@
 @import url(./variables.css);
 *{box-sizing: border-box;}
 
-.testgrid{
-    background-color: var(--main-color);
+
+body{
+    background-color: var(--bg-color);
 }
 
-.img-1x1{
+h1{
+    color: var(--accent-1);
+    font-size: 4rem;
+}
+
+header{
+    text-align: center;
+}
+
+p, a{
+    color: var(--font-color-light);
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+}
+
+.img-1x1,
+.img-1x2,
+.img-2x1,
+.img-2x2,
+.img-1x3,
+.img-3x1,
+.img-3x3{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
@@ -14,6 +36,9 @@
     justify-items: center;
     align-content: space-evenly;
     align-items: center;
+}
+
+.img-1x1{
     width: var(--img-block);
     height: var(--img-block);
     overflow: hidden;
@@ -21,14 +46,6 @@
     
 }
 .img-2x1{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    text-align:center;
-    justify-content: space-evenly;
-    justify-items: center;
-    align-content: space-evenly;
-    align-items: center;
     width: calc((var(--img-block) * 2) + 1rem);
     height: var(--img-block);
     overflow: hidden;
@@ -36,14 +53,6 @@
     grid-column: span 2 / auto;
 }
 .img-1x2{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    text-align:center;
-    justify-content: space-evenly;
-    justify-items: center;
-    align-content: space-evenly;
-    align-items: center;
     width: var(--img-block);
     height: calc((var(--img-block) * 2) + 1rem);
     overflow: hidden;
@@ -53,14 +62,7 @@
     
 }
 .img-2x2{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    text-align:center;
-    justify-content: space-evenly;
-    justify-items: center;
-    align-content: space-evenly;
-    align-items: center;
+    
     width: calc((var(--img-block) * 2) + 1rem);
     height: calc((var(--img-block) * 2) + 1rem);
     overflow: hidden;
@@ -68,6 +70,24 @@
     grid-column: span 2 / auto;
     grid-row: span 2 / auto;
 }
+.img-3x3{
+    width: calc((var(--img-block) * 3) + 2rem);
+    height: calc((var(--img-block) * 3) + 2rem);
+    overflow: hidden;
+    
+    grid-column: span 3 / auto;
+    grid-row: span 3 / auto;
+}
+
+.img-3x1{
+    width: calc((var(--img-block) * 3) + 2rem);
+    height: var(--img-block);
+    overflow: hidden;
+    text-align:center;
+    grid-column: span 3 / auto;
+}
+
+
 
 .img-1x1 img{
     width: 100%;
@@ -94,13 +114,16 @@
 
 #gallery{
     display: grid;
-    grid-template-columns: repeat(auto-fit, var(--img-block));
+    grid-template-columns: repeat(auto-fill, minmax(var(--img-block), 1fr));
     grid-auto-rows: var(--img-block);
     grid-auto-flow: row dense;
     gap: 1rem;
-    width: 90%;
+    background-color: var(--main-color);
+    width: 95%;
     height:auto;
     margin: auto;
+    padding: 5%;
+    border-radius: 0.5rem;
 
 }
 
@@ -112,7 +135,7 @@
     height: 100%;
     left:0;
     top:0;
-    background-color: hsl(100, 50%, 50%, 0.5);
+    background-color: var(--modal-bg-color);
 }
 
 #modal-content{
@@ -126,8 +149,54 @@
 }
 
 #wrapper{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
+    display:flex;
+    justify-content:center;
 }
+
+a{
+    text-decoration: none;
+    color: var(--accent-3);
+    border-bottom: 2px var(--accent-3) solid;
+    transition: all 100ms ease-in-out;
+}
+
+#pdf-link::before{
+    content: url('https://api.iconify.design/bi/file-earmark-pdf-fill.svg?color=%23e8866c&width=40');
+    vertical-align: -0.6rem;
+}
+
+.img-grow{
+    -webkit-animation: img-grow 0.2s cubic-bezier(0.680, -0.550, 0.265, 1.550) both;
+    animation: img-grow 0.2s cubic-bezier(0.680, -0.550, 0.265, 1.550) both;
+}
+
+.opacity-grow{
+    -webkit-animation: opacity-grow 0.2s;
+    animation: opacity-grow 0.2s;
+}
+
+a:hover{
+    border-bottom: 4px var(--accent-3) solid;
+}
+
+@keyframes opacity-grow {
+    0%{
+        background-color: var(--modal-bg-transparent);
+    }
+    100%{
+        background-color: var(--modal-bg-color);
+    }
+    
+}
+
+@keyframes img-grow {
+    0%{
+        max-width: 60%;
+        max-height: 60vh;
+    }
+    100%{
+        max-width: 90%;
+        max-height: 90vh;
+    }
+}
+
