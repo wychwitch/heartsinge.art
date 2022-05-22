@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&family=Comfortaa&family=Fredoka+One&family=Kanit&family=Pacifico&family=Piedra&display=swap');
 
 :root{
-    --main-color: #F8ECDE;
-    --accent-1: #828E8C;
+    --main-color: hsl(32, 65%, 92%);
+    --accent-1: hsl(170, 5%, 53%);
     --accent-2: hsl(104, 14%, 79%);
-    --accent-3: #E8866C;
-    --accent-4: #F2727D;
-    --bg-color: #494546;
+    --accent-3: hsl(13, 73%, 67%);
+    --accent-4: hsl(355, 83%, 70%);
+    --bg-color: hsl(345, 3%, 28%);
 
-    --font-color-light: #F8ECDE;
-    --font-color-dark: #494546;
+    --font-color-light: hsl(32, 65%, 92%);
+    --font-color-dark: hsl(345, 3%, 28%);
 
     --modal-bg-transparent: hsl(104, 14%, 79%, 0);
     --modal-bg-color: hsl(104, 14%, 79%, 0.5);
@@ -31,4 +31,18 @@
     font-family: 'Pacifico', cursive;
 
     font-family: 'Piedra', cursive; */
+
+
+    /* Colors
+    hsl(32, 65%, 92%);
+    hsl(170, 5%, 53%);
+    hsl(104, 14%, 79%);
+    hsl(204, 40%, 79%);
+    hsl(204, 30%, 46%);
+    hsl(304, 35%, 70%);
+    hsl(260, 25%, 60%);
+    hsl(13, 73%, 67%);
+    hsl(355, 70%, 70%);
+    hsl(345, 3%, 28%);
+    */
 }
