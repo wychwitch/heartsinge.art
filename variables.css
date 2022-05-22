@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&family=Comfortaa&family=Fredoka+One&family=Kanit&family=Pacifico&family=Piedra&display=swap');
+
 :root{
     --main-color: #F8ECDE;
     --accent-1: #828E8C;
     --accent-2: hsl(104, 14%, 79%);
     --accent-3: #E8866C;
+    --accent-4: #F2727D;
     --bg-color: #494546;
 
     --font-color-light: #F8ECDE;
@@ -12,4 +15,20 @@
     --modal-bg-color: hsl(104, 14%, 79%, 0.5);
 
     --img-block: 7rem;
+    --text: 'Baloo Tamma 2', cursive;
+    --cursive: 'Pacifico', cursive;
+    --heading: 'Piedra', cursive;
+    --sub-heading: 'Comfortaa', cursive;
+
+    /*     font-family: 'Baloo Tamma 2', cursive;
+
+    font-family: 'Comfortaa', cursive;
+
+    font-family: 'Fredoka One', cursive;
+
+    font-family: 'Kanit', sans-serif;
+
+    font-family: 'Pacifico', cursive;
+
+    font-family: 'Piedra', cursive; */
 }
