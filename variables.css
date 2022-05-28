@@ -6,7 +6,14 @@
     --accent-2: hsl(104, 14%, 79%);
     --accent-3: hsl(13, 73%, 67%);
     --accent-4: hsl(355, 83%, 70%);
+    --accent-5: hsl(204, 40%, 79%);
+    --accent-6: hsl(204, 30%, 46%);
+    --accent-7: hsl(304, 35%, 70%);
+    --accent-8: hsl(260, 25%, 60%, 05);
     --bg-color: hsl(345, 3%, 28%);
+    --bg-color-2: hsl(204, 30%, 46%, 0.5);
+    --bg-color-3: hsl(304, 35%, 70%, 0.5);
+    --bg-color-4: hsl(260, 25%, 60%, 0.5);
 
     --font-color-light: hsl(32, 65%, 92%);
     --font-color-dark: hsl(345, 3%, 28%);

@@ -7,7 +7,7 @@ body{
 }
 
 h1{
-    margin-top: 5rem;
+    margin-top: 9rem;
     color: var(--accent-4);
     font-size: 4rem;
     font-family: var(--heading);
@@ -36,6 +36,7 @@ p, a,li{
 .img-2x1,
 .img-2x2,
 .img-1x3,
+.img-2x3,
 .img-3x1,
 .img-3x3{
     display: grid;
@@ -45,29 +46,25 @@ p, a,li{
     justify-content: space-evenly;
     justify-items: center;
     align-content: space-evenly;
-    align-items: center;
+    align-items: start;
+    overflow: hidden;
+    text-align:center;
 }
 
 .img-1x1{
     width: var(--img-block);
     height: var(--img-block);
-    overflow: hidden;
-    text-align:center;
+    
     
 }
 .img-2x1{
     width: calc((var(--img-block) * 2) + 1rem);
     height: var(--img-block);
-    overflow: hidden;
-    text-align:center;
     grid-column: span 2 / auto;
 }
 .img-1x2{
     width: var(--img-block);
     height: calc((var(--img-block) * 2) + 1rem);
-    overflow: hidden;
-    text-align:center;
-    
     grid-row: span 2 / auto;
     
 }
@@ -75,16 +72,24 @@ p, a,li{
     
     width: calc((var(--img-block) * 2) + 1rem);
     height: calc((var(--img-block) * 2) + 1rem);
-    overflow: hidden;
-    
     grid-column: span 2 / auto;
     grid-row: span 2 / auto;
+}
+.img-1x3{
+    width: var(--img-block);
+    height: calc((var(--img-block) * 3) + 2rem);
+    grid-column: span 1 / auto;
+    grid-row: span 3 / auto;
+}
+.img-2x3{
+    width: calc((var(--img-block) * 2) + 1rem);
+    height: calc((var(--img-block) * 3) + 2rem);
+    grid-column: span 2 / auto;
+    grid-row: span 3 / auto;
 }
 .img-3x3{
     width: calc((var(--img-block) * 3) + 2rem);
     height: calc((var(--img-block) * 3) + 2rem);
-    overflow: hidden;
-    
     grid-column: span 3 / auto;
     grid-row: span 3 / auto;
 }
@@ -92,49 +97,100 @@ p, a,li{
 .img-3x1{
     width: calc((var(--img-block) * 3) + 2rem);
     height: var(--img-block);
-    overflow: hidden;
-    text-align:center;
     grid-column: span 3 / auto;
 }
 
-
-
-.img-1x1 img{
-    width: 100%;
+.img-1x1 img,
+.img-1x2 img,
+.img-2x1 img,
+.img-2x2 img,
+.img-1x3 img,
+.img-2x3 img,
+.img-3x1 img,
+.img-3x3 img{
     height: auto;
 }
-
+.img-1x1 img{
+    width: 170%;
+}
 .img-1x2 img{
     width: 170%;
-    height: auto;
     
 }
-
 .img-2x1 img{
     width: 180%;
-    height: auto;
     
 }
-
 .img-2x2 img{
     width: 200%;
-    height: auto;
-    
 }
-
+.img-1x3 img{
+    width: 300%;
+}
+.img-2x3 img{
+    width: 200%;
+}
+.img-3x1 img{
+    width: 180%;
+}
+.img-3x3 img{
+    width: 200%;
+}
 #gallery{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(var(--img-block), 1fr));
-    grid-auto-rows: var(--img-block);
-    grid-auto-flow: row dense;
-    gap: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem;
     background-color: var(--main-color);
     width: 95%;
     height:auto;
     margin: auto;
     padding: 5%;
     border-radius: 0.5rem;
+    width: 100%;
+    justify-content: center;
+    align-items: baseline;
+}
 
+#gallery .grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--img-block), 1fr));
+    grid-auto-rows: var(--img-block);
+    grid-auto-flow: row dense;
+    width: fit-content;
+    
+    gap: 1rem;
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+
+.focus-gallery{
+    background-color: var(--bg-color-2);
+}
+
+.drawing-gallery{
+    background-color: var(--bg-color-3);
+}
+
+.render-gallery{
+    background-color: var(--bg-color-4);
+}
+
+.gallery-header{
+    text-align: center;
+    margin: auto;
+}
+
+.drawing-header{
+    color: var(--accent-7);
+}
+
+.focus-header{
+    color: var(--accent-6);
+}
+
+.render-header{
+    color: var(--accent-8);
 }
 
 #image-modal{
