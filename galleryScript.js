@@ -1,10 +1,19 @@
-const gallery = document.getElementById("gallery");
+const subGalleries = document.getElementsByClassName("sub-gallery");
 
 const imgModal = document.getElementById("image-modal");
 
-const galleryArray = Array.from(gallery.childNodes).filter(
-  (child) => child.nodeName !== "#text"
+const galleryArray = [].concat(
+  [].concat(
+    Array.from(subGalleries[0].childNodes).filter(
+      (n) => n.nodeName !== "#text"
+    ),
+    Array.from(subGalleries[1].childNodes).filter(
+      (n) => n.nodeName !== "#text"
+    ),
+    Array.from(subGalleries[2].childNodes).filter((n) => n.nodeName !== "#text")
+  )
 );
+console.log({ subGalleries, galleryArray });
 
 const modalImg = imgModal.firstElementChild;
 
