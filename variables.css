@@ -21,6 +21,8 @@
     --modal-bg-transparent: hsl(104, 14%, 79%, 0);
     --modal-bg-color: hsl(104, 14%, 79%, 0.5);
 
+    --little-darker: hsl(104, 14%, 79%, 0.5);
+
     --img-block: 7rem;
     --text: 'Baloo Tamma 2', cursive;
     --cursive: 'Pacifico', cursive;

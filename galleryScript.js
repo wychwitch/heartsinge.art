@@ -1,7 +1,5 @@
 "use strict";
 
-import waitForElementTransition from "./node_modules/wait-for-element-transition/dist/wait-for-element-transition.js";
-
 const gallery = document.getElementById("gallery");
 
 const imgModal = document.getElementById("image-modal");
@@ -29,9 +27,9 @@ const bgFadeOut = [
     backgroundColor: "var(--modal-bg-transparent)",
   },
 ];
-const aniTiming = 150;
-const easingIn = ["ease-in"];
-const easingOut = ["ease-out"];
+const aniTiming = 100;
+const easingIn = ["cubic-bezier(0.250, 0.460, 0.450, 0.940)"];
+const easingOut = ["cubic-bezier(0.250, 0.460, 0.450, 0.940)"];
 
 const galleryArray = Array.from(gallery.childNodes).filter(
   (n) => n.nodeName === "DIV"
