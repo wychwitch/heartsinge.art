@@ -37,6 +37,8 @@ li {
 }
 
 
+
+
 .img-1x1,
 .img-1x2,
 .img-2x1,
@@ -371,4 +373,68 @@ label[for="drawing-gallery"] {
 
 label.clicked {
     background-color: var(--bg-color-2);
+}
+
+#contact-links a {
+    border-bottom: none;
+    margin: 0 1rem;
+}
+
+/* s */
+#menu-checkbox2 {
+    display: none;
+}
+
+
+nav li a p {
+    font-size: 0.9rem;
+    margin: 0;
+    padding: 0;
+    color: var(--bg-color)
+}
+
+nav li a {
+    padding: 0;
+    height: 2rem;
+    width: 3rem;
+}
+
+nav {
+    right: -5rem;
+    left: unset;
+    top: 25vh;
+    text-align: center;
+    border-radius: 10rem;
+    width: fit-content;
+    height: fit-content;
+}
+
+#menu-button2 {
+    position: fixed;
+    top: 46.20vh;
+    right: 1rem;
+    left: unset;
+}
+
+#menu-checkbox2:checked~#menu-button2 {
+    right: 7rem;
+
+}
+
+#menu-checkbox2:checked~nav {
+    right: 1rem;
+
+}
+
+#menu-button {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: fit-content;
+    width: 15vw;
+    height: 50vh;
 }
