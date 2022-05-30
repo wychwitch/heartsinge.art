@@ -1,30 +1,35 @@
 @import url(./variables.css);
-*{box-sizing: border-box;}
+
+* {
+    box-sizing: border-box;
+}
 
 
-body{
+body {
     background-color: var(--bg-color);
 }
 
-h1{
+h1 {
     margin-top: 9rem;
     color: var(--accent-4);
     font-size: 4rem;
     font-family: var(--heading);
 }
 
-h2{
+h2 {
     color: var(--accent-2);
     font-size: 2.5rem;
     font-family: var(--sub-heading);
 }
 
-header{
+header {
     text-align: center;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
 }
 
-p, a,li{
+p,
+a,
+li {
     color: var(--font-color-light);
     font-size: 1.6rem;
     line-height: 1.6rem;
@@ -39,64 +44,70 @@ p, a,li{
 .img-1x3,
 .img-2x3,
 .img-3x1,
-.img-3x3{
+.img-3x3 {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    text-align:center;
+    text-align: center;
     justify-content: space-evenly;
     justify-items: center;
     align-content: space-evenly;
     align-items: start;
     overflow: hidden;
-    text-align:center;
+    text-align: center;
     background-color: var(--little-darker);
 }
 
-.img-1x1{
+.img-1x1 {
     width: var(--img-block);
     height: var(--img-block);
-    
-    
+
+
 }
-.img-2x1{
+
+.img-2x1 {
     width: calc((var(--img-block) * 2) + 1rem);
     height: var(--img-block);
     grid-column: span 2 / auto;
 }
-.img-1x2{
+
+.img-1x2 {
     width: var(--img-block);
     height: calc((var(--img-block) * 2) + 1rem);
     grid-row: span 2 / auto;
-    
+
 }
-.img-2x2{
-    
+
+.img-2x2 {
+
     width: calc((var(--img-block) * 2) + 1rem);
     height: calc((var(--img-block) * 2) + 1rem);
     grid-column: span 2 / auto;
     grid-row: span 2 / auto;
 }
-.img-1x3{
+
+.img-1x3 {
     width: var(--img-block);
     height: calc((var(--img-block) * 3) + 2rem);
     grid-column: span 1 / auto;
     grid-row: span 3 / auto;
 }
-.img-2x3{
+
+.img-2x3 {
     width: calc((var(--img-block) * 2) + 1rem);
     height: calc((var(--img-block) * 3) + 2rem);
     grid-column: span 2 / auto;
     grid-row: span 3 / auto;
 }
-.img-3x3{
+
+.img-3x3 {
     width: calc((var(--img-block) * 3) + 2rem);
     height: calc((var(--img-block) * 3) + 2rem);
     grid-column: span 3 / auto;
     grid-row: span 3 / auto;
 }
 
-.img-3x1{
+.img-3x1 {
     width: calc((var(--img-block) * 3) + 2rem);
     height: var(--img-block);
     grid-column: span 3 / auto;
@@ -109,62 +120,71 @@ p, a,li{
 .img-1x3 img,
 .img-2x3 img,
 .img-3x1 img,
-.img-3x3 img{
+.img-3x3 img {
     height: auto;
 }
-.img-1x1 img{
+
+.img-1x1 img {
     width: 170%;
 }
-.img-1x2 img{
+
+.img-1x2 img {
     width: 170%;
-    
+
 }
-.img-2x1 img{
+
+.img-2x1 img {
     width: 180%;
-    
+
 }
-.img-2x2 img{
+
+.img-2x2 img {
     width: 200%;
 }
-.img-1x3 img{
+
+.img-1x3 img {
     width: 300%;
 }
-.img-2x3 img{
+
+.img-2x3 img {
     width: 200%;
 }
-.img-3x1 img{
+
+.img-3x1 img {
     width: 180%;
 }
-.img-3x3 img{
+
+.img-3x3 img {
     width: 200%;
 }
-#gallery{
+
+#gallery {
     background-color: var(--main-color);
     width: 95%;
-    height:auto;
+    height: auto;
     margin: auto;
     padding: 5%;
     border-radius: 0.5rem;
     width: 100%;
 }
 
-.grid{
+.grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(var(--img-block), 1fr));
     grid-auto-rows: var(--img-block);
     grid-auto-flow: row dense;
     width: fit-content;
-    
+
     gap: 1rem;
     padding: 2rem;
     border-radius: 0.5rem;
 }
 
-.grid h2{
+.grid h2 {
     color: var(--accent-4);
 }
 
-#gallery-header{
+#gallery-header {
     text-align: center;
     margin: auto;
     grid-row: 1/2;
@@ -172,18 +192,18 @@ p, a,li{
 }
 
 
-#image-modal{
+#image-modal {
     display: grid;
     position: fixed;
     z-index: 2;
     width: 100%;
     height: 100%;
-    left:0;
-    top:0;
+    left: 0;
+    top: 0;
     background-color: var(--modal-bg-color);
 }
 
-#modal-content{
+#modal-content {
     max-width: 90%;
     max-height: 90vh;
     margin: auto;
@@ -194,70 +214,74 @@ p, a,li{
     display: none;
 }
 
-.hidden{
+#contact-links {
+    margin-top: 3rem;
+}
+
+.hidden {
     display: none;
 }
 
-#wrapper{
-    display:flex;
-    justify-content:center;
+#wrapper {
+    display: flex;
+    justify-content: center;
 }
 
-a{
+a {
     text-decoration: none;
     color: var(--accent-3);
     border-bottom: 2px var(--accent-3) solid;
     transition: all 100ms ease-in-out;
 }
 
-#pdf-link::before{
+#pdf-link::before {
     content: url('https://api.iconify.design/bi/file-earmark-pdf-fill.svg?color=%23e8866c&width=40');
     vertical-align: -0.6rem;
 }
 
-.img-grow{
+.img-grow {
     -webkit-animation: img-grow 0.2s cubic-bezier(0.680, -0.550, 0.265, 1.550) both;
     animation: img-grow 0.2s cubic-bezier(0.680, -0.550, 0.265, 1.550) both;
 }
 
-.opacity-grow{
+.opacity-grow {
     -webkit-animation: opacity-grow 0.2s;
     animation: opacity-grow 0.2s;
 }
 
-a:hover{
+a:hover {
     border-bottom: 4px var(--accent-3) solid;
 }
 
-.heart{
+.heart {
     color: var(--accent-4);
 }
 
-#menu-checkbox{
+#menu-checkbox {
     display: none;
 }
 
-#menu-button{
+#menu-button {
     text-align: end;
     display: block;
-    right:0;
+    right: 0;
 }
 
-nav ul{
+nav ul {
     display: none;
     height: 0;
-    margin:0;
+    margin: 0;
     padding: 0;
 }
 
-nav li{
+nav li {
     font-weight: 800;
     list-style: none;
     margin: 0.1rem;
     text-align: center;
 }
 
-nav li a{
+nav li a {
     display: inline-block;
     color: var(--bg-color);
     background-color: var(--accent-1);
@@ -268,67 +292,67 @@ nav li a{
     border-radius: 0.5rem;
 }
 
-nav{
+nav {
     display: block;
     position: fixed;
     z-index: 1;
-    top:2.5%;
-    left:2.5%;
+    top: 2.5%;
+    left: 2.5%;
     width: 95%;
     padding: 0.5rem;
     background-color: var(--accent-2);
     border-radius: 0.5rem;
 }
 
-#menu-checkbox:checked ~ ul{
+#menu-checkbox:checked~ul {
     display: block;
     height: fit-content;
 }
 
 
 .scale-in {
-	-webkit-animation: scale-in-ani 200ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: scale-in-ani 200ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    -webkit-animation: scale-in-ani 200ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: scale-in-ani 200ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-.scale-out{
+.scale-out {
     -webkit-animation: scale-out-ani 200ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: scale-out-ani 200ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both; 
+    animation: scale-out-ani 200ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-.modal-bg-fade-in{
+.modal-bg-fade-in {
     -webkit-animation: modal-bg-fade-out-ani 200ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: modal-bg-fade-in-ani 200ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both; 
+    animation: modal-bg-fade-in-ani 200ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-.modal-bg-fade-out{
+.modal-bg-fade-out {
     -webkit-animation: modal-bg-fade-out-ani 200ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: modal-bg-fade-out-ani 200ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both; 
+    animation: modal-bg-fade-out-ani 200ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-#walking-model img{
+#walking-model img {
     width: 800%;
 }
 
-#lamia img{
+#lamia img {
     width: 400%;
 }
 
-#supermassive img{
+#supermassive img {
     width: 300%;
 }
 
-#gallery-btns{
+#gallery-btns {
     grid-row: 2/3;
-    grid-column:  1 /-1;
+    grid-column: 1 /-1;
     text-align: center;
 }
 
-#gallery-btns input{
+#gallery-btns input {
     display: none;
 }
 
-#gallery-btns label{
+#gallery-btns label {
     font-size: 2rem;
     padding: 1rem 1rem;
     font-family: var(--sub-heading);
@@ -337,14 +361,14 @@ nav{
     user-select: none;
 }
 
-label[for="render-gallery"]{
+label[for="render-gallery"] {
     background-color: var(--accent-7);
 }
 
-label[for="drawing-gallery"]{
+label[for="drawing-gallery"] {
     background-color: var(--accent-8);
 }
 
-label.clicked{
+label.clicked {
     background-color: var(--bg-color-2);
 }
