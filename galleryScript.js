@@ -11,6 +11,7 @@ const works2d = document.getElementById("drawing-gallery");
 const scaleIn = [{ transform: "scale(0)" }, { transform: "scale(1)" }];
 
 const scaleOut = [{ transform: "scale(1)" }, { transform: "scale(0)" }];
+
 const bgFadeIn = [
   {
     backgroundColor: "var(--modal-bg-transparent)",
@@ -27,6 +28,7 @@ const bgFadeOut = [
     backgroundColor: "var(--modal-bg-transparent)",
   },
 ];
+
 const aniTiming = 100;
 const easingIn = ["cubic-bezier(0.250, 0.460, 0.450, 0.940)"];
 const easingOut = ["cubic-bezier(0.250, 0.460, 0.450, 0.940)"];
@@ -36,6 +38,34 @@ const galleryArray = Array.from(gallery.childNodes).filter(
 );
 
 const modalImg = imgModal.firstElementChild;
+
+works3d.checked = false;
+works2d.checked = false;
+
+const hideOtherGalleries = function (className) {
+  const renderWorks = Array.from(document.getElementsByClassName(className));
+  console.log({ renderWorks });
+
+  galleryArray.forEach((img) =>
+    img.animate(
+      {
+        opacity: [1, 0],
+      },
+      200
+    )
+  );
+  setTimeout(() => {
+    renderWorks.forEach((img) => img.classList.toggle("hidden"));
+    galleryArray.forEach((img) =>
+      img.animate(
+        {
+          opacity: [0, 1],
+        },
+        200
+      )
+    );
+  }, 150);
+};
 
 const display = function (pic) {
   const imgSrc = pic.firstElementChild.src;
@@ -70,19 +100,25 @@ galleryArray.forEach((pic) => {
 });
 
 works3d.addEventListener("click", function () {
-  console.log("aaa");
-  const drawingWorks = Array.from(document.getElementsByClassName("drawing"));
-  console.log({ drawingWorks });
-  drawingWorks.forEach((img) => img.classList.toggle("hidden"));
+  console.log({ works2d });
+
+  if (works2d.checked) {
+    hideOtherGalleries("render");
+    works2d.labels[0].classList.toggle("clicked");
+    works2d.checked = false;
+  }
+  hideOtherGalleries("drawing");
   works3d.labels[0].classList.toggle("clicked");
 });
 
 works2d.addEventListener("click", function () {
-  console.log("aaa");
-  const renderWorks = Array.from(document.getElementsByClassName("render"));
-  console.log({ renderWorks });
-  renderWorks.forEach((img) => img.classList.toggle("hidden"));
+  console.log({ works3d });
+
+  if (works3d.checked) {
+    hideOtherGalleries("drawing");
+    works3d.labels[0].classList.toggle("clicked");
+    works3d.checked = false;
+  }
+  hideOtherGalleries("render");
   works2d.labels[0].classList.toggle("clicked");
 });
-
-//const img = pic.firstChild.src;

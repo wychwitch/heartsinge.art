@@ -21,6 +21,7 @@ h2{
 
 header{
     text-align: center;
+    margin-bottom: 5rem;
 }
 
 p, a,li{
@@ -159,16 +160,8 @@ p, a,li{
     border-radius: 0.5rem;
 }
 
-.focus-gallery{
-    background-color: var(--bg-color-2);
-}
-
-.drawing-gallery{
-    background-color: var(--bg-color-3);
-}
-
-.render-gallery{
-    background-color: var(--bg-color-4);
+.grid h2{
+    color: var(--accent-4);
 }
 
 #gallery-header{
@@ -337,10 +330,11 @@ nav{
 
 #gallery-btns label{
     font-size: 2rem;
-    padding: 1rem 3rem;
+    padding: 1rem 1rem;
     font-family: var(--sub-heading);
     font-weight: 900;
     border-radius: 1rem;
+    user-select: none;
 }
 
 label[for="render-gallery"]{
