@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "wait-for-element-transition": "^3.3.0"
+  }
+}

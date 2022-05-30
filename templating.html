@@ -2,107 +2,153 @@
 
 <html lang="en">
   <head>
-    <meta name="viewport" content="device=device-width, initial-scale=1.0">
+    <meta name="viewport" content="device=device-width, initial-scale=1.0" />
     <link href="styles.css" rel="stylesheet" />
     <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
   </head>
   <body>
     <div>
-        <nav>
-            <!-- Side-nav, thats hamburger on mobile -->
-            <input id="menu-checkbox" type="checkbox">
-            <label for="menu-checkbox" id="menu-button">
-                <span class="iconify-inline" data-icon="gg:menu-boxed" style="color: hsl(355, 70%, 70%);" data-width="50"></span>
-            </label>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Imagine</a></li>
-                <li><a href="#">Icons</a></li>
-                <li><a href="#">In</a></li>
-                <li><a href="#">Here</a></li>
-            </ul>
-          </nav>    
+      <nav>
+        <!-- Side-nav, thats hamburger on mobile -->
+        <input id="menu-checkbox" type="checkbox" />
+        <label for="menu-checkbox" id="menu-button">
+          <span
+            class="iconify-inline"
+            data-icon="gg:menu-boxed"
+            style="color: hsl(355, 70%, 70%)"
+            data-width="50"
+          ></span>
+        </label>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Imagine</a></li>
+          <li><a href="#">Icons</a></li>
+          <li><a href="#">In</a></li>
+          <li><a href="#">Here</a></li>
+        </ul>
+      </nav>
       <header>
         <!-- Header image and text-->
         <h1><span class="heart">H</span>eartsinge</h1>
-        <h2>Subtitle test</h1>
+        <h2>Subtitle test</h2>
         <p>The works of Lou Brown</p>
-        <p>
-            <div id="pdf-link">
-                <a  href="./loubrown_resume2022.pdf">
-                    Download Resume
-                  </a>
-            </div>
-          
-        </p>
+
+        <div id="pdf-link">
+          <a href="./loubrown_resume2022.pdf"> Download Resume </a>
+        </div>
       </header>
       <div id="wrapper">
-        <main id="gallery">
-          <section>
-            <h2 class="focus-header gallery-header">Highlights</h2>
-            <div class="grid focus-gallery sub-gallery">
-              <div class="testgrid img-1x1">
-                <img src="./img/1x1.png" alt="" />
-              </div>
-              <div class="testgrid img-1x2 ">
-                <img src="./img/1x2.png" alt="" />
-              </div>
-              <div class="testgrid img-2x1">
-                <img src="./img/2x1.png" alt="" />
-              </div>
-              <div class="testgrid img-2x2">
-                <img src="./img/2x2.png" alt="" />
-              </div>
-              <div class="testgrid img-1x1">
-                <img src="./img/1x1.png" alt="" />
-              </div>
-            </div>
+        <main id="gallery" class="grid">
+          <h2 id="gallery-header">Gallery</h2>
+          <section id="gallery-btns">
+            <input type="checkbox" id="render-gallery" />
+            <label for="render-gallery">3d Works</label>
+
+            <input type="checkbox" id="drawing-gallery" />
+            <label for="drawing-gallery">2d Works</label>
           </section>
-          <section >
-            <h2 class="render-header gallery-header">Renders</h2>
-            <div class="grid render-gallery sub-gallery">
-              <div class="testgrid img-1x2">
-                <img src="./img/1x2.png" alt="" />
-              </div>
-              <div class="testgrid img-2x1">
-                <img src="./img/2x1.png" alt="" />
-              </div>
-              <div class="testgrid img-2x2">
-                <img src="./img/2x2.png" alt="" />
-              </div>
-            </div>
-          </section>
-          <section >
-            <h2 class="drawing-header gallery-header">Art</h2>
-            <div class="grid drawing-gallery sub-gallery">
-              <div class="testgrid img-1x1">
-                <img src="./img/1x1.png" alt="" />
-              </div>
-              
-              <div class="testgrid img-1x3">
-                <img src="./img/1x2.png" alt="" />
-              </div>
-              <div class="testgrid img-1x1">
-                <img src="./img/1x1.png" alt="" />
-              </div>
-              <div class="testgrid img-1x1">
-                <img src="./img/1x1.png" alt="" />
-              </div>
-              <div class="testgrid img-2x1">
-                <img src="./img/2x1.png" alt="" />
-              </div>
-              <div class="testgrid img-2x3">
-                <img src="./img/2x2.png" alt="" />
-              </div>
-            </div>
-          </section>
+          <div class="render img-1x2">
+            <img src="./img/1x2 3d.jpg" alt="" />
+          </div>
+
+          <div class="drawing img-1x1">
+            <img src="./img/2x3.jpg" alt="" />
+          </div>
+
+          <div class="drawing img-1x2">
+            <img src="./img/1x2.png" alt="" />
+          </div>
+
+          <div class="drawing img-2x1">
+            <img src="./img/2x1.png" alt="" />
+          </div>
+
+          <div class="render img-2x2">
+            <img src="./img/2x2 3d.png" alt="" />
+          </div>
+
+          <div class="render img-1x1">
+            <img src="./img/2x2 3d.png" alt="" />
+          </div>
+
+          <div class="drawing img-1x1">
+            <img src="./img/1x1.png" alt="" />
+          </div>
+
+          <div class="drawing img-1x2">
+            <img src="./img/1x2.png" alt="" />
+          </div>
+
+          <div id="walking-model" class="render img-1x3">
+            <img src="./img/1x3 3d.png" alt="" />
+          </div>
+
+          <div class="drawing img-2x2">
+            <img src="./img/2x2.png" alt="" />
+          </div>
+
+          <div class="drawing img-1x1">
+            <img src="./img/1x1.png" alt="" />
+          </div>
+
+          <div class="drawing img-1x3">
+            <img src="./img/1x2.png" alt="" />
+          </div>
+
+          <div class="drawing img-1x1">
+            <img src="./img/2x3.jpg" alt="" />
+          </div>
+
+          <div class="drawing img-1x1">
+            <img src="./img/1x1.png" alt="" />
+          </div>
+
+          <div class="render img-1x1">
+            <img src="./img/2x2 3d.png" alt="" />
+          </div>
+
+          <div class="drawing img-1x1">
+            <img src="./img/1x1.png" alt="" />
+          </div>
+
+          <div class="drawing img-2x1">
+            <img src="./img/2x1.png" alt="" />
+          </div>
+
+          <div id="supermassive" class="drawing img-2x3">
+            <img src="./img/2x3.png" alt="" />
+          </div>
+
+          <div class="drawing img-1x1">
+            <img src="./img/2x3.jpg" alt="" />
+          </div>
+
+          <div class="render img-2x2">
+            <img src="./img/2x2 3d.png" alt="" />
+          </div>
+
+          <div class="drawing img-1x1">
+            <img src="./img/2x3.jpg" alt="" />
+          </div>
+
+          <div class="drawing img-2x3">
+            <img src="./img/2x2.png" alt="" />
+          </div>
+
+          <div id="lamia" class="drawing img-2x3">
+            <img src="./img/3x1.png" alt="" />
+          </div>
+
+          <div class="drawing img-1x1">
+            <img src="./img/2x3.jpg" alt="" />
+          </div>
         </main>
-        <footer></footer>
       </div>
+      <footer>BLA BLA</footer>
     </div>
     <div id="image-modal" class="hidden">
       <img src="" alt="" id="modal-content" />
     </div>
-    <script src="./galleryScript.js"></script>
+    <script type="module" src="./galleryScript.js"></script>
   </body>
 </html>
