@@ -160,7 +160,7 @@ li {
     width: 200%;
 }
 
-#gallery {
+main {
     background-color: var(--main-color);
     width: 95%;
     height: auto;
@@ -175,8 +175,6 @@ li {
     grid-template-columns: repeat(auto-fill, minmax(var(--img-block), 1fr));
     grid-auto-rows: var(--img-block);
     grid-auto-flow: row dense;
-    width: fit-content;
-
     gap: 1rem;
     padding: 2rem;
     border-radius: 0.5rem;
@@ -189,7 +187,7 @@ li {
 #gallery-header {
     text-align: center;
     margin: auto;
-    grid-row: 1/2;
+    grid-row: 4/5;
     grid-column: 1 / -1;
 }
 
@@ -259,22 +257,6 @@ a:hover {
     color: var(--accent-4);
 }
 
-#menu-checkbox {
-    display: none;
-}
-
-#menu-button {
-    text-align: end;
-    display: block;
-    right: 0;
-}
-
-nav ul {
-    display: none;
-    height: 0;
-    margin: 0;
-    padding: 0;
-}
 
 nav li {
     font-weight: 800;
@@ -294,21 +276,31 @@ nav li a {
     border-radius: 0.5rem;
 }
 
-nav {
-    display: block;
-    position: fixed;
-    z-index: 1;
-    top: 2.5%;
-    left: 2.5%;
-    width: 95%;
-    padding: 0.5rem;
-    background-color: var(--accent-2);
-    border-radius: 0.5rem;
-}
+
 
 #menu-checkbox:checked~ul {
     display: block;
     height: fit-content;
+}
+
+
+nav li a p {
+    font-size: 0.9rem;
+    margin: 0;
+    padding: 0;
+    color: var(--bg-color)
+}
+
+nav li a {
+    padding: 0;
+    height: 2rem;
+    width: 3rem;
+}
+
+
+#menu-checkbox2:checked~nav {
+    right: 1rem;
+
 }
 
 
@@ -345,7 +337,7 @@ nav {
 }
 
 #gallery-btns {
-    grid-row: 2/3;
+    grid-row: 5/6;
     grid-column: 1 /-1;
     text-align: center;
 }
@@ -384,57 +376,173 @@ label.clicked {
 #menu-checkbox2 {
     display: none;
 }
+nav li a {
+    height: 100%;
+    width: 100%;
+}
 
-
-nav li a p {
+nav li p {
     font-size: 0.9rem;
     margin: 0;
     padding: 0;
-    color: var(--bg-color)
+    color: var(--bg-color);
+    text-align: center;
 }
 
-nav li a {
+nav ul li{
+    visibility: hidden;
     padding: 0;
     height: 2rem;
     width: 3rem;
+    opacity: 0;
+    height: 4rem;
+        width: 4rem;
+    transition: opacity 600ms;
 }
 
+
 nav {
-    right: -5rem;
+    display: block;
+    position: fixed;
+    z-index: 1;
+    padding: 0.5rem;
+    background-color: var(--accent-2);
+    border-radius: 0.5rem;
+    right: 4vw;
     left: unset;
-    top: 25vh;
+    top: 5vh;
     text-align: center;
     border-radius: 10rem;
     width: fit-content;
-    height: fit-content;
-}
-
-#menu-button2 {
-    position: fixed;
-    top: 46.20vh;
-    right: 1rem;
-    left: unset;
-}
-
-#menu-checkbox2:checked~#menu-button2 {
-    right: 7rem;
-
-}
-
-#menu-checkbox2:checked~nav {
-    right: 1rem;
-
-}
-
-#menu-button {
-    display: none;
 }
 
 nav ul {
+    padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: fit-content;
-    width: 15vw;
-    height: 50vh;
+    align-content: center;
+    text-align: center;
+    height: 0;
+    margin:auto;
+    width: fit-content;
+    transition: height 600ms;
+}
+
+#menu-checkbox2:checked ~ ul{
+    height: 40vh;
+}
+#menu-checkbox2:checked + ul li{
+    visibility: visible;
+    opacity: 1;
+}
+
+nav li a .iconify{
+    position: relative;
+    top: 30%;
+}
+
+.desktop-options{
+    display: none;
+}
+
+#proficiencies{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    flex-wrap: wrap;
+    align-items: center;
+    grid-column: 1/-1;
+    grid-row: 2/4;
+}
+#proficiencies img{
+    margin: 1rem;
+    width: 5rem;
+}
+
+#prof-header{
+    text-align: center;
+    grid-column: 1/-1;
+    grid-row: 1/2;
+}
+
+@media (min-width: 752px){
+
+    #proficiencies{
+        grid-row: 2/3;
+    }
+
+    #gallery-header {
+        grid-row: 3/4;
+    }
+
+    #gallery-btns {
+        grid-row: 4/5;
+    }
+
+
+    
+}
+
+@media (min-width: 1080px) {
+
+    .desktop-options{
+        display: block;
+    }
+
+    #heading-content{
+        position: fixed;
+        left: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav {
+        top: unset;
+        left: unset;
+        right: unset;
+        position: relative;
+        display: block;
+    }
+
+    nav ul,
+    nav #menu-checkbox2:checked ~ ul {
+        height: 62vh;
+        width: 5rem;
+        margin: auto;
+    }
+
+   
+
+
+    nav ul li{
+        visibility: visible;
+        opacity: 1;
+        display: block;
+        margin: auto;
+        height: 3rem;
+        width: 3rem;
+    }
+    
+
+    header{
+        width: 15rem;
+    }
+
+    header h1{
+        margin-top: 1rem;
+        font-size: 3rem;
+    }
+
+    #contact-links{
+        display: none;
+    }
+    #menu-button2{
+        display: none;
+    }
+    
+    #wrapper{
+        margin-left: 16rem;
+        display: block;
+    }
 }
