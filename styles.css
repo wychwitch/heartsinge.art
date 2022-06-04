@@ -160,7 +160,6 @@ main {
   width: 95%;
   height: auto;
   margin: auto;
-  padding: 5%;
   border-radius: 0.5rem;
   width: 100%;
 }
@@ -177,11 +176,7 @@ main {
   overflow: hidden;
 }
 
-.grid h2 {
-  color: var(--accent-4);
-}
-
-#gallery-header {
+main > section > h2 {
   text-align: center;
   margin: auto;
   color: var(--accent-4);
@@ -470,7 +465,7 @@ nav li a .iconify {
 .pop-up {
   position: absolute;
   z-index: 1;
-  top: -150%;
+  top: -180%;
   border-radius: 1rem;
   padding: 0.5rem 3rem;
   opacity: 0;
@@ -488,12 +483,12 @@ nav li a .iconify {
 
 #csp .pop-up {
   transform: translateX(-36%);
-  top: -160%;
+  top: -190%;
 }
 
 #subs-paint .pop-up {
   transform: translateX(-39%);
-  top: -130%;
+  top: -150%;
 }
 
 #prof-images > div:nth-of-type(odd) > .pop-up {
@@ -525,21 +520,23 @@ nav li a .iconify {
   margin-left: -20px;
 }
 
-.flex {
+#about .flex {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 main p {
   color: var(--bg-color);
   line-height: 1.4em;
+  font-size: 1.4rem;
 }
 
 #about-pic,
 #about-text {
   width: 90%;
-  margin: auto;
+  margin: 0 auto;
 }
 
 #about figure img {
@@ -554,6 +551,15 @@ main p {
   font-style: italic;
 }
 
+#about-text {
+  text-align: left;
+  text-indent: 1em;
+}
+
+#about-text p:first-of-type {
+  margin-top: 0;
+}
+
 main {
   overflow: hidden;
 }
@@ -563,6 +569,7 @@ main > section {
   visibility: hidden;
   opacity: 0;
   height: 0;
+  padding: 0;
   transition: opacity 500ms;
 }
 
@@ -573,9 +580,15 @@ main > section:target {
   visibility: visible;
   height: auto;
   transition: opacity 500ms;
+  padding: 5%;
 }
 
 @media (min-width: 1080px) {
+  #about .flex section,
+  #about .flex figure {
+    width: 40%;
+  }
+
   .desktop-options {
     display: block;
   }
