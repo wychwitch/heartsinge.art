@@ -555,16 +555,14 @@ main p {
 }
 
 main {
-  display: flex;
-  flex-direction: column;
-  height: fit-content;
-  flex-wrap: nowrap;
+  overflow: hidden;
 }
 
 main > section:target ~ section:last-child,
 main > section {
-  visibility: collapse;
+  visibility: hidden;
   opacity: 0;
+  height: 0;
   transition: opacity 500ms;
 }
 
@@ -573,6 +571,7 @@ main > :last-child,
 main > section:target {
   opacity: 1;
   visibility: visible;
+  height: auto;
   transition: opacity 500ms;
 }
 
