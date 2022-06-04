@@ -8,6 +8,14 @@ const works3d = document.getElementById("render-gallery");
 
 const works2d = document.getElementById("drawing-gallery");
 
+const allSections = Array.from(
+  document.getElementById("main-content").childNodes
+).filter((n) => n.nodeName === "SECTION");
+
+console.log({ allSections });
+
+const indexSection = document.getElementById("index");
+
 const scaleIn = [{ transform: "scale(0)" }, { transform: "scale(1)" }];
 
 const scaleOut = [{ transform: "scale(1)" }, { transform: "scale(0)" }];

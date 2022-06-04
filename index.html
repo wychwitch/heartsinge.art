@@ -55,17 +55,17 @@
         <ul>
           <!-- About, Contact, Past Projects -->
           <li>
-            <a href="#"
+            <a href="#index"
               ><span class="iconify" data-icon="ant-design:home-filled"></span
             ></a>
           </li>
           <li>
-            <a href="#"
+            <a href="#about"
               ><span class="iconify" data-icon="eva:info-outline"></span
             ></a>
           </li>
           <li>
-            <a href="#"
+            <a href="#projects"
               ><span class="iconify" data-icon="pepicons:paint-pallet"></span
             ></a>
           </li>
@@ -107,157 +107,199 @@
       </nav>
     </div>
     <div id="wrapper">
-      <main>
-        <h2 id="gallery-header">Gallery</h2>
-        <section id="gallery-btns">
-          <input type="checkbox" id="render-gallery" />
-          <label for="render-gallery">3d Works</label>
-
-          <input type="checkbox" id="drawing-gallery" />
-          <label for="drawing-gallery">2d Works</label>
+      <main id="main-content">
+        <section id="about">
+          <section class="flex">
+            <figure id="about-pic">
+              <img src="./img/other/headshot.jpg" />
+              <figcaption>
+                <p>
+                  Lou enjoys ocean biology, printmaking, woodcuts, and
+                  collecting oddities. Some of their favorite games and series
+                  are Guild Wars 2, Halo, Kirby, and Puyo Puyo Tetris.
+                </p>
+              </figcaption>
+            </figure>
+            <section id="about-text">
+              <p>
+                Lou Brown is a non-binary, midwestern game developer with
+                specializations as a 3D generalist and as a 2D visual
+                development artist. Lou is an energetic and fun faucet of
+                creativity and has a strong conviction to bring unique and
+                dazzling experiences to life, and create interactions that stay
+                with people after the experience is over. Currently, they are a
+                student at UW-STOUT. Working on their BFA in Game Design
+                Development - Art.
+              </p>
+              <p>
+                They’re currently looking for work within a studio or company
+                space, either as an intern or full-time employee.
+              </p>
+              <p>
+                They are proficient in
+                <span class="emphasize"
+                  >Clip Studio Paint, Maya, Substance Painter, Unity, Unreal,
+                  and ZBrush</span
+                >
+              </p>
+            </section>
+          </section>
         </section>
-        <section id="gallery" class="grid">
-          <div class="render img-1x2">
-            <img src="./img/gallery/1x2 3d.jpg" alt="" />
-          </div>
-
-          <div class="drawing img-1x1">
-            <img src="./img/gallery/2x3.jpg" alt="" />
-          </div>
-
-          <div class="drawing img-1x2">
-            <img src="./img/gallery/1x2.png" alt="" />
-          </div>
-
-          <div class="drawing img-2x1">
-            <img src="./img/gallery/2x1.png" alt="" />
-          </div>
-
-          <div class="render img-2x2">
-            <img src="./img/gallery/2x2 3d.png" alt="" />
-          </div>
-
-          <div class="render img-1x1">
-            <img src="./img/gallery/2x2 3d.png" alt="" />
-          </div>
-
-          <div class="drawing img-1x1">
-            <img src="./img/gallery/1x1.png" alt="" />
-          </div>
-
-          <div class="drawing img-1x2">
-            <img src="./img/gallery/1x2.png" alt="" />
-          </div>
-
-          <div id="walking-model" class="render img-1x3">
-            <img src="./img/gallery/1x3 3d.png" alt="" />
-          </div>
-
-          <div class="drawing img-2x2">
-            <img src="./img/gallery/2x2.png" alt="" />
-          </div>
-
-          <div class="drawing img-1x1">
-            <img src="./img/gallery/1x1.png" alt="" />
-          </div>
-
-          <div class="drawing img-1x3">
-            <img src="./img/gallery/1x2.png" alt="" />
-          </div>
-
-          <div class="drawing img-1x1">
-            <img src="./img/gallery/2x3.jpg" alt="" />
-          </div>
-
-          <div class="drawing img-1x1">
-            <img src="./img/gallery/1x1.png" alt="" />
-          </div>
-
-          <div class="render img-1x1">
-            <img src="./img/gallery/2x2 3d.png" alt="" />
-          </div>
-
-          <div class="drawing img-1x1">
-            <img src="./img/gallery/1x1.png" alt="" />
-          </div>
-
-          <div class="drawing img-2x1">
-            <img src="./img/gallery/2x1.png" alt="" />
-          </div>
-
-          <div id="supermassive" class="drawing img-2x3">
-            <img src="./img/gallery/2x3.png" alt="" />
-          </div>
-
-          <div class="drawing img-1x1">
-            <img src="./img/gallery/2x3.jpg" alt="" />
-          </div>
-
-          <div class="render img-2x2">
-            <img src="./img/gallery/2x2 3d.png" alt="" />
-          </div>
-
-          <div class="drawing img-1x1">
-            <img src="./img/gallery/2x3.jpg" alt="" />
-          </div>
-
-          <div class="drawing img-3x3">
-            <img src="./img/gallery/2x2.png" alt="" />
-          </div>
-
-          <div id="lamia" class="drawing img-2x3">
-            <img src="./img/gallery/3x1.png" alt="" />
-          </div>
-
-          <div class="drawing img-1x1">
-            <img src="./img/gallery/2x3.jpg" alt="" />
-          </div>
+        <section id="projects">
+          <h2>Projects</h2>
         </section>
-        <section id="proficiencies">
-          <h2 id="prof-header">Proficiencies</h2>
-          <div id="prof-images">
-            <div id="csp">
-              <img src="./img/icons/clip-studio-paint.svg" />
-              <div class="pop-up">
-                <p>Clip Studio Paint</p>
-              </div>
+        <section id="index">
+          <h2 id="gallery-header">Gallery</h2>
+          <section id="gallery-btns">
+            <input type="checkbox" id="render-gallery" />
+            <label for="render-gallery">3d Works</label>
+
+            <input type="checkbox" id="drawing-gallery" />
+            <label for="drawing-gallery">2d Works</label>
+          </section>
+          <section id="gallery" class="grid">
+            <div class="render img-1x2">
+              <img src="./img/gallery/1x2 3d.jpg" alt="" />
             </div>
 
-            <div id="maya">
-              <img src="./img/icons/maya.svg" />
-              <div class="pop-up">
-                <p>Maya</p>
-              </div>
+            <div class="drawing img-1x1">
+              <img src="./img/gallery/2x3.jpg" alt="" />
             </div>
 
-            <div id="subs-paint">
-              <img src="./img/icons/substance-painter.svg" />
-              <div class="pop-up">
-                <p>Substance Painter</p>
-              </div>
+            <div class="drawing img-1x2">
+              <img src="./img/gallery/1x2.png" alt="" />
             </div>
 
-            <div id="unity">
-              <img src="./img/icons/unity.svg" />
-              <div class="pop-up">
-                <p>Unity</p>
-              </div>
+            <div class="drawing img-2x1">
+              <img src="./img/gallery/2x1.png" alt="" />
             </div>
 
-            <div id="unreal">
-              <img src="./img/icons/unreal.svg" />
-              <div class="pop-up">
-                <p>Unreal</p>
-              </div>
+            <div class="render img-2x2">
+              <img src="./img/gallery/2x2 3d.png" alt="" />
             </div>
 
-            <div id="zbrush">
-              <img src="./img/icons/zbrush.svg" />
-              <div class="pop-up">
-                <p>ZBrush</p>
+            <div class="render img-1x1">
+              <img src="./img/gallery/2x2 3d.png" alt="" />
+            </div>
+
+            <div class="drawing img-1x1">
+              <img src="./img/gallery/1x1.png" alt="" />
+            </div>
+
+            <div class="drawing img-1x2">
+              <img src="./img/gallery/1x2.png" alt="" />
+            </div>
+
+            <div id="walking-model" class="render img-1x3">
+              <img src="./img/gallery/1x3 3d.png" alt="" />
+            </div>
+
+            <div class="drawing img-2x2">
+              <img src="./img/gallery/2x2.png" alt="" />
+            </div>
+
+            <div class="drawing img-1x1">
+              <img src="./img/gallery/1x1.png" alt="" />
+            </div>
+
+            <div class="drawing img-1x3">
+              <img src="./img/gallery/1x2.png" alt="" />
+            </div>
+
+            <div class="drawing img-1x1">
+              <img src="./img/gallery/2x3.jpg" alt="" />
+            </div>
+
+            <div class="drawing img-1x1">
+              <img src="./img/gallery/1x1.png" alt="" />
+            </div>
+
+            <div class="render img-1x1">
+              <img src="./img/gallery/2x2 3d.png" alt="" />
+            </div>
+
+            <div class="drawing img-1x1">
+              <img src="./img/gallery/1x1.png" alt="" />
+            </div>
+
+            <div class="drawing img-2x1">
+              <img src="./img/gallery/2x1.png" alt="" />
+            </div>
+
+            <div id="supermassive" class="drawing img-2x3">
+              <img src="./img/gallery/2x3.png" alt="" />
+            </div>
+
+            <div class="drawing img-1x1">
+              <img src="./img/gallery/2x3.jpg" alt="" />
+            </div>
+
+            <div class="render img-2x2">
+              <img src="./img/gallery/2x2 3d.png" alt="" />
+            </div>
+
+            <div class="drawing img-1x1">
+              <img src="./img/gallery/2x3.jpg" alt="" />
+            </div>
+
+            <div class="drawing img-3x3">
+              <img src="./img/gallery/2x2.png" alt="" />
+            </div>
+
+            <div id="lamia" class="drawing img-2x3">
+              <img src="./img/gallery/3x1.png" alt="" />
+            </div>
+
+            <div class="drawing img-1x1">
+              <img src="./img/gallery/2x3.jpg" alt="" />
+            </div>
+          </section>
+          <section id="proficiencies">
+            <h2 id="prof-header">Proficiencies</h2>
+            <div id="prof-images">
+              <div id="csp">
+                <img src="./img/icons/clip-studio-paint.svg" />
+                <div class="pop-up">
+                  <p>Clip Studio Paint</p>
+                </div>
+              </div>
+
+              <div id="maya">
+                <img src="./img/icons/maya.svg" />
+                <div class="pop-up">
+                  <p>Maya</p>
+                </div>
+              </div>
+
+              <div id="subs-paint">
+                <img src="./img/icons/substance-painter.svg" />
+                <div class="pop-up">
+                  <p>Substance Painter</p>
+                </div>
+              </div>
+
+              <div id="unity">
+                <img src="./img/icons/unity.svg" />
+                <div class="pop-up">
+                  <p>Unity</p>
+                </div>
+              </div>
+
+              <div id="unreal">
+                <img src="./img/icons/unreal.svg" />
+                <div class="pop-up">
+                  <p>Unreal</p>
+                </div>
+              </div>
+
+              <div id="zbrush">
+                <img src="./img/icons/zbrush.svg" />
+                <div class="pop-up">
+                  <p>ZBrush</p>
+                </div>
               </div>
             </div>
-          </div>
+          </section>
         </section>
       </main>
     </div>
