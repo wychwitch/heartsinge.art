@@ -34,7 +34,7 @@ header {
 
 header img {
   transition: width 300ms;
-  width: 30rem;
+  width: 90vw;
 }
 
 p,
@@ -545,9 +545,15 @@ main p {
   font-size: 1.4rem;
 }
 
-#about-pic,
+#about-pic {
+  width: 30%;
+}
 #about-text {
   width: 90%;
+}
+
+#about-pic,
+#about-text {
   margin: 0 auto;
 }
 
@@ -677,9 +683,12 @@ main > section:target {
 }
 
 @media (min-width: 1080px) {
-  #about .flex section,
-  #about .flex figure {
+  #about .flex section {
     width: 40%;
+  }
+
+  #about .flex figure {
+    width: 30%;
   }
 
   .desktop-options {
