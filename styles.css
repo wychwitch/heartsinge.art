@@ -205,6 +205,10 @@ main > section > h2 {
   max-height: 90vh;
   margin: auto;
   transform: scale(1);
+
+  border: 1rem var(--modal-img-bg) solid;
+  border-radius: 1rem;
+  background-color: var(--modal-img-bg);
 }
 
 #image-modal.hidden {
@@ -450,7 +454,8 @@ nav li a .iconify {
   color: var(--accent-4);
 }
 
-#prof-images > div {
+#prof-images > div,
+#contact-images > div {
   text-align: center;
   margin: 1rem;
   width: 5rem;
@@ -458,7 +463,8 @@ nav li a .iconify {
   position: relative;
 }
 
-#prof-images > div > img:hover ~ div.pop-up {
+#prof-images > div > img:hover ~ div.pop-up,
+#contact-images > div > a:hover ~ div.pop-up {
   opacity: 1;
   visibility: visible;
 }
@@ -621,6 +627,53 @@ main > section:target {
 
 #project-wrapper h2 {
   text-align: center;
+}
+
+#contact-images > div {
+  display: inline;
+  margin: 0 1rem;
+}
+
+#contact-images {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: fit-content;
+  height: 30vh;
+  margin: 0 auto;
+}
+
+#contact-images > div:nth-of-type(odd) .iconify {
+  color: var(--accent-5);
+}
+
+#contact-images > div:nth-of-type(even) .iconify {
+  color: var(--accent-6);
+}
+
+#contact-images > div:nth-of-type(odd) > .pop-up {
+  background-color: var(--accent-1);
+}
+#contact-images > div:nth-of-type(even) > .pop-up {
+  background-color: var(--accent-2);
+}
+
+#contact-images > div:nth-of-type(odd) > .pop-up::after {
+  border-color: var(--accent-1) transparent;
+}
+
+#contact-images > div:nth-of-type(even) > .pop-up::after {
+  border-color: var(--accent-2) transparent;
+}
+
+#contact a {
+  border-bottom: unset;
+}
+
+#art-station .pop-up {
+  transform: translateX(-32%);
 }
 
 @media (min-width: 1080px) {

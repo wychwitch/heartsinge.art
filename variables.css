@@ -1,35 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&family=Comfortaa&family=Fredoka+One&family=Kanit&family=Pacifico&family=Piedra&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&family=Comfortaa&family=Fredoka+One&family=Kanit&family=Pacifico&family=Piedra&display=swap");
 
-:root{
-    --main-color: hsl(32, 65%, 92%);
-    --accent-1: hsl(170, 5%, 53%);
-    --accent-2: hsl(104, 14%, 79%);
-    --accent-3: hsl(13, 73%, 67%);
-    --accent-4: hsl(355, 83%, 70%);
-    --accent-5: hsl(204, 40%, 79%);
-    --accent-6: hsl(204, 30%, 46%);
-    --accent-7: hsl(304, 35%, 70%);
-    --accent-8: hsl(260, 25%, 60%, 05);
-    --bg-color: hsl(345, 3%, 28%);
-    --bg-color-2: hsl(204, 30%, 46%, 0.5);
-    --bg-color-3: hsl(304, 35%, 70%, 0.5);
-    --bg-color-4: hsl(260, 25%, 60%, 0.5);
+:root {
+  --main-color: hsl(32, 65%, 92%);
+  --accent-1: hsl(170, 5%, 53%);
+  --accent-2: hsl(104, 14%, 79%);
+  --accent-3: hsl(13, 73%, 67%);
+  --accent-4: hsl(355, 83%, 70%);
+  --accent-5: hsl(204, 40%, 79%);
+  --accent-6: hsl(204, 30%, 46%);
+  --accent-7: hsl(304, 35%, 70%);
+  --accent-8: hsl(260, 25%, 60%, 05);
+  --bg-color: hsl(345, 3%, 28%);
+  --bg-color-2: hsl(204, 30%, 46%, 0.5);
+  --bg-color-3: hsl(304, 35%, 70%, 0.5);
+  --bg-color-4: hsl(260, 25%, 60%, 0.5);
 
-    --font-color-light: hsl(32, 65%, 92%);
-    --font-color-dark: hsl(345, 3%, 28%);
+  --font-color-light: hsl(32, 65%, 92%);
+  --font-color-dark: hsl(345, 3%, 28%);
 
-    --modal-bg-transparent: hsl(104, 14%, 79%, 0);
-    --modal-bg-color: hsl(104, 14%, 79%, 0.5);
+  --modal-bg-transparent: hsl(104, 14%, 79%, 0);
+  --modal-bg-color: hsl(104, 14%, 79%, 0.5);
 
-    --little-darker: hsl(104, 14%, 79%, 0.5);
+  --little-darker: hsl(104, 14%, 79%, 0.5);
 
-    --img-block: 7rem;
-    --text: 'Baloo Tamma 2', cursive;
-    --cursive: 'Pacifico', cursive;
-    --heading: 'Piedra', cursive;
-    --sub-heading: 'Comfortaa', cursive;
+  --modal-img-bg: hsl(104, 14%, 69%, 0.5);
 
-    /*     font-family: 'Baloo Tamma 2', cursive;
+  --img-block: 7rem;
+  --text: "Baloo Tamma 2", cursive;
+  --cursive: "Pacifico", cursive;
+  --heading: "Piedra", cursive;
+  --sub-heading: "Comfortaa", cursive;
+
+  /*     font-family: 'Baloo Tamma 2', cursive;
 
     font-family: 'Comfortaa', cursive;
 
@@ -41,8 +43,7 @@
 
     font-family: 'Piedra', cursive; */
 
-
-    /* Colors
+  /* Colors
     hsl(32, 65%, 92%);
     hsl(170, 5%, 53%);
     hsl(104, 14%, 79%);

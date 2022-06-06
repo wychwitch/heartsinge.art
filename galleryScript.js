@@ -8,12 +8,6 @@ const works3d = document.getElementById("render-gallery");
 
 const works2d = document.getElementById("drawing-gallery");
 
-const allSections = Array.from(
-  document.getElementById("main-content").childNodes
-).filter((n) => n.nodeName === "SECTION");
-
-console.log({ allSections });
-
 const indexSection = document.getElementById("index");
 
 const scaleIn = [{ transform: "scale(0)" }, { transform: "scale(1)" }];
@@ -41,20 +35,31 @@ const aniTiming = 100;
 const easingIn = ["cubic-bezier(0.250, 0.460, 0.450, 0.940)"];
 const easingOut = ["cubic-bezier(0.250, 0.460, 0.450, 0.940)"];
 
-const galleryArray = Array.from(gallery.childNodes).filter(
-  (n) => n.nodeName === "DIV"
-);
-
 const modalImg = imgModal.firstElementChild;
 
 works3d.checked = false;
 works2d.checked = false;
 
+const getModalImgs = function () {
+  const grids = document.getElementsByClassName("img-grid");
+  const gridsArray = Array.from(grids);
+  let images = [];
+  for (const grid of gridsArray) {
+    const gridImageDivs = Array.from(grid.childNodes).filter(
+      (n) => n.nodeName === "DIV"
+    );
+    images = [...gridImageDivs, ...images];
+  }
+  return images;
+};
+
+const modalImageArray = getModalImgs();
+
 const hideOtherGalleries = function (className) {
   const renderWorks = Array.from(document.getElementsByClassName(className));
   console.log({ renderWorks });
 
-  galleryArray.forEach((img) =>
+  modalImageArray.forEach((img) =>
     img.animate(
       {
         opacity: [1, 0],
@@ -64,7 +69,7 @@ const hideOtherGalleries = function (className) {
   );
   setTimeout(() => {
     renderWorks.forEach((img) => img.classList.toggle("hidden"));
-    galleryArray.forEach((img) =>
+    modalImageArray.forEach((img) =>
       img.animate(
         {
           opacity: [0, 1],
@@ -101,7 +106,7 @@ const closeImage = async function (target) {
   }
 };
 
-galleryArray.forEach((pic) => {
+modalImageArray.forEach((pic) => {
   pic.addEventListener("click", function () {
     display(pic);
   });
