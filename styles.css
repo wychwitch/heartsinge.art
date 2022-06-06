@@ -583,6 +583,11 @@ main > section:target {
   padding: 5%;
 }
 
+.emphasize {
+  color: var(--accent-4);
+  font-style: italic;
+}
+
 @media (min-width: 1080px) {
   #about .flex section,
   #about .flex figure {
