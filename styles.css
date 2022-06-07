@@ -117,6 +117,11 @@ li {
   height: var(--img-block);
   grid-column: span 3 / auto;
 }
+#projects .img-3x1 {
+  width: calc((var(--img-block) * 2) + 1rem);
+  height: var(--img-block);
+  grid-column: span 2 / auto;
+}
 
 .img-1x1 img,
 .img-1x2 img,
@@ -172,7 +177,7 @@ main {
 
 .grid {
   --grid-layout-gap: 1rem;
-  --grid-column-count: 8;
+  --grid-column-count: 12;
   --grid-item--min-width: var(--img-block);
 
   /**
@@ -628,21 +633,22 @@ main > section:target {
   font-style: italic;
 }
 
-.project-grid > section {
-  width: 50%;
-}
-
 .project-grid {
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto;
-  height: fit-content;
-  padding: 0;
-  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
-.project-images {
-  grid-template-columns: repeat(3, var(--img-block));
+.project-description {
   height: fit-content;
+  width: 80%;
+  order: 1;
+}
+.project-images {
+  width: fit-content;
+  order: 2;
+}
+.project-description h3 {
+  text-align: center;
 }
 
 #example-project {
@@ -704,6 +710,9 @@ main > section:target {
   transform: translateX(-32%);
 }
 
+@media (min-width: 924px) {
+}
+
 @media (min-width: 480px) {
   #gallery-btns {
     flex-direction: row;
@@ -718,6 +727,30 @@ main > section:target {
 }
 
 @media (min-width: 1080px) {
+  .project-description,
+  .project-images {
+    padding: 1rem;
+  }
+
+  .project-description {
+    margin: 0 auto;
+  }
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    height: fit-content;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+
+  .project-images {
+    --img-block: calc(var(--img-block) * 1.5);
+    grid-template-columns: repeat(3, var(--img-block));
+    height: fit-content;
+  }
+
   #about .flex section {
     width: 40%;
   }
