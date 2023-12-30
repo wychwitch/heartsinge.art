@@ -1,0 +1,145 @@
+backend:
+  name: github
+  repo: wychwitch/heartsinge.art
+  branch: main
+
+media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/images/uploads"
+
+collections:
+- name: "pages"
+  label: "Pages"
+  files:
+    - label: "Home Page"
+      name: "home"
+      file: "src/lib/cms/pages/home.json"
+      format: json
+      fields:
+        - {label: Page Title, name: title, widget: string}
+        - {label: "Main Image", name: "mainImg", widget: "image", choose_url: true}
+        - {label: Body, name: body, widget: markdown}
+
+
+    - label: "About Page"
+      name: "about"
+      file: "src/lib/cms/pages/about.json"
+      format: json
+      fields:
+        - {label: Page Title, name: title, widget: string}
+        - {label: "Main Image", name: "mainImg", widget: "image", choose_url: true, required: false}
+        - {label: Body, name: body, widget: markdown}
+        - label: Links
+          name: links
+          widget: list
+          required: false
+          fields:
+            - {label: Link Name, name: name, widget: string}
+            - {label: Link, name: link, widget: string}
+
+
+    - label: "Photogrammetry Page"
+      name: "photogrammetry"
+      file: "src/lib/cms/pages/photogrammetry.json"
+      format: json
+      fields:
+        - {label: Page Title, name: title, widget: string}
+        - {label: Body, name: body, widget: markdown}
+        - label: Images 
+          name: images 
+          widget: list 
+          fields:
+          - {label: "Image", name: "img", widget: "image", choose_url: true}
+          - {label: "Image Title", name: "title", widget: "string", required: false}
+          - {label: "Image Source (link)", name: "link", widget: "string", required: false}
+          - {label: "Image Description", name: "desc", widget: "string", required: false}
+
+
+    - label: "3D work Page"
+      name: "3dwork"
+      file: "src/lib/cms/pages/3dwork.json"
+      format: json
+      fields:
+        - {label: Page Title, name: title, widget: string}
+        - {label: Body, name: body, widget: markdown}
+        - label: Images 
+          name: images 
+          widget: list 
+          fields:
+          - {label: "Image", name: "img", widget: "image", choose_url: true}
+          - {label: "Image Title", name: "title", widget: "string", required: false}
+          - {label: "Image Source (link)", name: "link", widget: "string", required: false}
+          - {label: "Image Description", name: "desc", widget: "string", required: false}
+
+
+    - label: "2D Previs Page"
+      name: "2dprevis"
+      file: "src/lib/cms/pages/2dprevis.json"
+      format: json
+      fields:
+        - {label: Page Title, name: title, widget: string}
+        - {label: Body, name: body, widget: markdown}
+        - label: Images 
+          name: images 
+          widget: list 
+          fields:
+          - {label: "Image", name: "img", widget: "image", choose_url: true}
+          - {label: "Image Title", name: "title", widget: "string", required: false}
+          - {label: "Image Source (link)", name: "link", widget: "string", required: false}
+          - {label: "Image Description", name: "desc", widget: "string", required: false}
+
+
+    - label: "Photogrammetry Page"
+      name: "photogrammetry"
+      file: "src/lib/cms/pages/photogrammetry.json"
+      format: json
+      fields:
+        - {label: Page Title, name: title, widget: string}
+        - {label: Body, name: body, widget: markdown}
+        - label: Images 
+          name: images 
+          widget: list 
+          fields:
+          - {label: "Image", name: "img", widget: "image", choose_url: true}
+          - {label: "Image Title", name: "title", widget: "string", required: false}
+          - {label: "Image Source (link)", name: "link", widget: "string", required: false}
+          - {label: "Image Description", name: "desc", widget: "string", required: false}
+
+
+    - label: "Games Page"
+      name: "games"
+      file: "src/lib/cms/pages/photogrammetry.json"
+      format: json
+      fields:
+        - {label: Page Title, name: title, widget: string}
+        - {label: Body, name: body, widget: markdown}
+        - label: Game Sets
+          name: gameSets
+          widget: list
+          fields:
+          - {label: "Set Title", name: "title", widget: "string", required: false}
+          - {label: "Set Description", name: "desc", widget: "string", required: false}
+          - {label: "Link", name: "link", widget: "string", required: false}
+          - {label: "Background Color", name: "bg-color", widget: "color", default: "#ffb188", required: false}
+          - {label: "Main Image", name: "main-img", widget: "image", choose_url: true}
+          - label: Images 
+            name: images 
+            widget: list 
+            fields:
+            - {label: "Image", name: "img", widget: "image", choose_url: true}
+            - {label: "Image Title", name: "title", widget: "string", required: false}
+            - {label: "Image Description", name: "desc", widget: "string", required: false}
+
+
+- name: "settings"
+  label: "Settings"
+  files:
+    - label: "Main Settings"
+      name: "mainSettings"
+      file: "src/lib/cms/pages/main-settings.json"
+      format: json
+      fields:
+        - {label: Email, name: email, widget: string}
+        - {label: Embed Blurb, name: blurb, widget: string}
+        - {label: "Embed Image", name: "embedImg", widget: "image", choose_url: true}
+        - {label: "Site Title", name: title, widget: string}
+        - {label: "Site URL", name: url, widget: string}
