@@ -88,23 +88,6 @@ collections:
           - {label: "Image Description", name: "desc", widget: "string", required: false}
 
 
-    - label: "Photogrammetry Page"
-      name: "photogrammetry"
-      file: "src/lib/cms/pages/photogrammetry.json"
-      format: json
-      fields:
-        - {label: Page Title, name: title, widget: string}
-        - {label: Body, name: body, widget: markdown}
-        - label: Images 
-          name: images 
-          widget: list 
-          fields:
-          - {label: "Image", name: "img", widget: "image", choose_url: true}
-          - {label: "Image Title", name: "title", widget: "string", required: false}
-          - {label: "Image Source (link)", name: "link", widget: "string", required: false}
-          - {label: "Image Description", name: "desc", widget: "string", required: false}
-
-
     - label: "Games Page"
       name: "games"
       file: "src/lib/cms/pages/photogrammetry.json"
