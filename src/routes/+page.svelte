@@ -1,4 +1,5 @@
 <script>
+    import ImageGallery from "$lib/components/ImageGallery.svelte";
     export let data;
 </script>
 
@@ -11,6 +12,7 @@
         <h1 class="text-secondary-400 text-center text-4xl">
             {data.title}
         </h1>
+
         <div class="my-6">{data.body}</div>
     </section>
 </div>

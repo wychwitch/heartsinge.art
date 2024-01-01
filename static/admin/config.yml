@@ -18,7 +18,14 @@ collections:
         - {label: Page Title, name: title, widget: string}
         - {label: "Main Image", name: "mainImg", widget: "image", choose_url: true}
         - {label: Body, name: body, widget: markdown}
-
+        - label: Images 
+          name: images 
+          widget: list 
+          fields:
+          - {label: "Image", name: "img", widget: "image", choose_url: true}
+          - {label: "Image Title", name: "title", widget: "string", required: false}
+          - {label: "Image Source (link)", name: "link", widget: "string", required: false}
+          - {label: "Image Description", name: "desc", widget: "string", required: false}
 
     - label: "About Page"
       name: "about"
